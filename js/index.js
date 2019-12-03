@@ -53,7 +53,7 @@ const endPlay = () => {
     window.clearInterval(scoreTicker);
 };
 
-startPlay();
+//startPlay();
 
 // prepareLocalMem("azy");
 // console.log(getAllScores());

@@ -1,0 +1,6 @@
+.section {
+    max-width: 300px;
+    padding: 14px 18px;
+    border-radius: 5px;
+    border: 1px #ddd solid;
+}

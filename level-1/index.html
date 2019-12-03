@@ -4,13 +4,22 @@
         <meta charset="UTF-8" />
         <title>Dark Patterns Level 1</title>
         <link rel="stylesheet" href="../css/global.css" />
-    </head>
-    <body>
-        <h1>Level 1</h1>
-        <script src="../js/scoring.js"></script>
+        <link rel="stylesheet" href="../css/level-1.css" />
         <script>
             const levelNum = 1;
         </script>
+    </head>
+    <body>
+        <script src="../js/scoring.js"></script>
         <script src="../js/index.js"></script>
+        <script src="../js/level-1.js"></script>
+        <div id="playArea">
+            <h1>Level 1: Into the Amazon</h1>
+            <p>
+                Your task: <span class="highlight">cancel your account</span> as
+                fast as you can.
+            </p>
+            <button onclick="startPlay();step1();">Start!</button>
+        </div>
     </body>
 </html>
