@@ -1,0 +1,20 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: helvetica;
+}
+
+#restart {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#score {
+    display: inline-block;
+}
+
+#header {
+    padding: 20px;
+    background-color: blue;
+    color: white;
+}

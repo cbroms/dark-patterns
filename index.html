@@ -3,10 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <title>Dark Patterns</title>
-        <script src="js/scoring.js"></script>
-        <script src="js/index.js"></script>
+        <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
     </head>
     <body>
         <h1>Hey there</h1>
+        <a href="/level-1/">Play the game</a>
+        <script src="../js/scoring.js"></script>
+        <script>
+            const id = uuidv4();
+            startGame(id);
+        </script>
     </body>
 </html>
