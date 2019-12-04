@@ -1,6 +1,76 @@
 .section {
-    max-width: 300px;
+    width: 275px;
     padding: 14px 18px;
+    margin: 20px 5px;
     border-radius: 5px;
     border: 1px #ddd solid;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.section a {
+    color: #0066c0;
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+#sectionContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.playStep {
+    display: none;
+}
+
+#footer {
+    height: 400px;
+    width: 100%;
+    background-color: #232f3e;
+}
+
+.links {
+    max-width: 800px;
+    margin: 20px auto;
+    /*  padding: 20px;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer {
+    color: #ddd;
+    padding-top: 20px;
+}
+
+#account {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 80vh;
+}
+
+#header {
+    color: white;
+    padding: 10px 40px;
+    height: 100px;
+    width: 100%;
+    background-color: #232f3e;
+}
+
+#title {
+    margin-left: 23px;
+}
+
+#whoops {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 80vh;
+}
+.accent {
+    color: #e47911;
 }

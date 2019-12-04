@@ -16,7 +16,7 @@ const startPlay = () => {
 
     // setup header with score and reset button
     const headerDiv = document.createElement("DIV");
-    headerDiv.id = "header";
+    headerDiv.id = "playHeader";
 
     const restartButton = document.createElement("BUTTON");
     restartButton.id = "restart";

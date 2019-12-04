@@ -13,9 +13,9 @@ body {
     display: inline-block;
 }
 
-#header {
+#playHeader {
     padding: 20px;
-    background-color: blue;
+    background-color: black;
     color: white;
 }
 

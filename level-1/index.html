@@ -13,13 +13,121 @@
         <script src="../js/scoring.js"></script>
         <script src="../js/index.js"></script>
         <script src="../js/level-1.js"></script>
-        <div id="playArea">
+        <div id="instructions">
             <h1>Level 1: Into the Amazon</h1>
             <p>
-                Your task: <span class="highlight">cancel your account</span> as
-                fast as you can.
+                Your task:
+                <span class="highlight">cancel your account</span> as fast as
+                you can.
             </p>
             <button onclick="startPlay();step1();">Start!</button>
+        </div>
+
+        <!-- header component for show  -->
+        <div id="header" class="playStep">
+            <h1><span class="accent">the</span> amazon</h1>
+        </div>
+
+        <!-- main account page  -->
+        <div id="account" class="playStep">
+            <h1 id="title">Your Account</h1>
+            <div id="sectionContainer">
+                <div class="section">
+                    <h3>Memberships and Subscriptions</h3>
+                    <a onclick="notEvenClose();">Reading Unlimited</a>
+                    <a onclick="notEvenClose();">Video Channels</a>
+                    <a onclick="notEvenClose();">Music Unlimited</a>
+                    <a onclick="notEvenClose();">Subscribe &amp; Save</a>
+                    <a onclick="notEvenClose();">Magazine subscriptions</a>
+                    <a onclick="notEvenClose();">Video Subscriptions</a>
+                    <a onclick="notEvenClose();">Other subscriptions</a>
+                </div>
+                <div class="section">
+                    <h3>Ordering and Shopping Preferences</h3>
+                    <a onclick="notEvenClose();">Your addresses</a>
+                    <a onclick="notEvenClose();">Payment options</a>
+                    <a onclick="notEvenClose();">Your profile</a>
+                    <a onclick="notEvenClose();">Archived orders</a>
+                    <a onclick="notEvenClose();">Manage your lists</a>
+                    <a onclick="notEvenClose();">Download order reports</a>
+                    <a onclick="notEvenClose();">Checkout settings</a>
+                    <a onclick="notEvenClose();">Language preferences</a>
+                    <a onclick="notEvenClose();">Manage saved IDs</a>
+                    <a onclick="notEvenClose();">Coupons</a>
+                </div>
+                <div class="section">
+                    <h3>Digital content and devices</h3>
+                    <a onclick="notEvenClose();">Manage content and devices</a>
+                    <a onclick="notEvenClose();">Your apps</a>
+                    <a onclick="notEvenClose();">Video settings</a>
+                    <a onclick="notEvenClose();">Music Settings</a>
+                    <a onclick="notEvenClose();">Manage Photos</a>
+                    <a onclick="notEvenClose();">Digital games and software</a>
+                    <a onclick="notEvenClose();">Streaming settings</a>
+                    <a onclick="notEvenClose();"
+                        >Digital gifts you've received</a
+                    >
+                    <a onclick="notEvenClose();">Digital and device forum</a>
+                </div>
+                <div class="section">
+                    <h3>Communication and content</h3>
+                    <a onclick="notEvenClose();">Messages from sellers</a>
+                    <a onclick="notEvenClose();">Email Subscriptions</a>
+                    <a onclick="notEvenClose();">Advertising preferences</a>
+                    <a onclick="notEvenClose();">Communication preferences</a>
+                    <a onclick="notEvenClose();">Shipment updates via text</a>
+                    <a onclick="notEvenClose();">Shopping notifications</a>
+                    <a onclick="notEvenClose();">Deals notifications</a>
+                </div>
+                <div class="section">
+                    <h3>Shopping programs and rentals</h3>
+                    <a onclick="notEvenClose();">Rentals</a>
+                    <a onclick="notEvenClose();">Household Delivery</a>
+                    <a onclick="notEvenClose();">Pantry Now</a>
+                    <a onclick="notEvenClose();">Rewards summary</a>
+                    <a onclick="notEvenClose();">Teens Program</a>
+                    <a onclick="notEvenClose();">Kids Program</a>
+                    <a onclick="notEvenClose();">Allowances</a>
+                    <a onclick="notEvenClose();">Pet Profiles</a>
+                    <a onclick="notEvenClose();">Shop with Points</a>
+                </div>
+                <div class="section">
+                    <h3>Other programs</h3>
+                    <a onclick="notEvenClose();">Credit cards</a>
+                    <a onclick="notEvenClose();">Your seller account</a>
+                    <a onclick="notEvenClose();">Manage your trade-ins</a>
+                    <a onclick="notEvenClose();">Business registration</a>
+                    <a onclick="notEvenClose();">Web Services</a>
+                    <a onclick="notEvenClose();">Tax exemption program</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="whoops" class="playStep">
+            <h1>Not Even Close!</h1>
+            <p>This page does not let you close your account.</p>
+            <button onclick="">Go Back</button>
+        </div>
+
+        <!-- footer with nav links   -->
+        <div id="footer" class="playStep">
+            <div class="links">
+                <h4>Get To Know Us</h4>
+                <a onclick="notEvenClose();">Blog</a>
+                <a onclick="notEvenClose();">About</a>
+                <a onclick="notEvenClose();">Press Center</a>
+                <a onclick="notEvenClose();">Investor Relations</a>
+                <a onclick="notEvenClose();">Products</a>
+                <a onclick="notEvenClose();">Tours</a>
+            </div>
+            <div class="links">
+                <h4>Let Us Help You</h4>
+                <a onclick="notEvenClose();">Your Orders</a>
+                <a onclick="notEvenClose();">Shipping Rates &amp; Policies</a>
+                <a onclick="notEvenClose();">Returns &amp; Replacements</a>
+                <a onclick="notEvenClose();">Manage Your Content and Devices</a>
+                <a onclick="notEvenClose();">Help</a>
+            </div>
         </div>
     </body>
 </html>
