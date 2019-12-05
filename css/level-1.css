@@ -6,6 +6,53 @@
     border: 1px #ddd solid;
 }
 
+.column {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.sideBySide {
+    display: inline-block;
+}
+
+.fancy {
+    width: 100% !important;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.fancy:hover {
+    background-color: #eee;
+}
+
+.selected {
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+
+#bar {
+    margin-top: 30px;
+    margin-left: 20px;
+    max-width: 600px;
+    width: 60vw;
+    background-color: white;
+    border-radius: 5px;
+    height: 40px;
+}
+
+button {
+    font-size: 100%;
+    font-weight: bold;
+    display: block;
+    margin-top: 30px;
+    min-width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+    cursor: pointer;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -14,11 +61,10 @@ a {
 .section a {
     color: #0066c0;
     display: block;
-
     margin-bottom: 4px;
 }
 
-#sectionContainer {
+.sectionContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -50,15 +96,21 @@ a {
 
 #account {
     max-width: 1000px;
-    margin: 0 auto;
-    height: 80vh;
+    margin: 60px auto;
+    min-height: 80vh;
+}
+
+.padded {
+    min-height: 80vh;
+    padding: 10px;
+    max-width: 1000px;
+    margin: 60px auto;
 }
 
 #header {
     color: white;
     padding: 10px 40px;
     height: 100px;
-    width: 100%;
     background-color: #232f3e;
 }
 

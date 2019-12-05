@@ -9,6 +9,14 @@ if (!id) {
 // var to store the interval used to score
 let scoreTicker;
 
+const getTime = id => {
+    const currentScore = getGameScore(id);
+    const minutes = Math.floor(currentScore / 60);
+    let seconds = currentScore - minutes * 60;
+    seconds = seconds.toString().length === 1 ? `0${seconds}` : seconds;
+    return `${minutes}:${seconds}`;
+};
+
 // update the score every second
 const startPlay = () => {
     // setup the mem for the level
@@ -36,21 +44,19 @@ const startPlay = () => {
 
     scoreTicker = window.setInterval(() => {
         updateGameScore(1, id, levelNum);
-        currentScore = getGameScore(id);
 
-        // format the time
-        const minutes = Math.floor(currentScore / 60);
-        let seconds = currentScore - minutes * 60;
-        seconds = seconds.toString().length === 1 ? `0${seconds}` : seconds;
+        const currentScore = getTime(id);
 
         document.getElementById(
             "score"
-        ).innerText = `Your time: ${minutes}:${seconds}`;
+        ).innerText = `Your time: ${currentScore}`;
     }, 1000);
 };
 
 const endPlay = () => {
     window.clearInterval(scoreTicker);
+    const headerDiv = document.getElementById("playHeader");
+    headerDiv.style.display = "none";
 };
 
 //startPlay();

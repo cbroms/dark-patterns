@@ -13,7 +13,7 @@
         <script src="../js/scoring.js"></script>
         <script src="../js/index.js"></script>
         <script src="../js/level-1.js"></script>
-        <div id="instructions">
+        <div id="instructions" class="playStep padded" style="display: block;">
             <h1>Level 1: Into the Amazon</h1>
             <p>
                 Your task:
@@ -23,15 +23,36 @@
             <button onclick="startPlay();step1();">Start!</button>
         </div>
 
+        <div id="wow" class="playStep padded">
+            <h1>You Cancelled Your Account!</h1>
+
+            Nice work! You completed this level in
+            <h1 id="final" style="display: inline-block;"></h1>
+        </div>
+
         <!-- header component for show  -->
         <div id="header" class="playStep">
-            <h1><span class="accent">the</span> amazon</h1>
+            <div class="sectionContainer">
+                <div class="column">
+                    <h1 class="sideBySide" style="margin-top: 30px;">
+                        <span class="accent">the</span> amazon
+                    </h1>
+                </div>
+                <div class="column">
+                    <div id="bar" class="sideBySide"></div>
+                </div>
+                <div class="column">
+                    <button class="sideBySide" onclick="step1();">
+                        Your Account
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- main account page  -->
         <div id="account" class="playStep">
             <h1 id="title">Your Account</h1>
-            <div id="sectionContainer">
+            <div class="sectionContainer">
                 <div class="section">
                     <h3>Memberships and Subscriptions</h3>
                     <a onclick="notEvenClose();">Reading Unlimited</a>
@@ -45,7 +66,7 @@
                 <div class="section">
                     <h3>Ordering and Shopping Preferences</h3>
                     <a onclick="notEvenClose();">Your addresses</a>
-                    <a onclick="notEvenClose();">Payment options</a>
+                    <a onclick="payment();">Payment options</a>
                     <a onclick="notEvenClose();">Your profile</a>
                     <a onclick="notEvenClose();">Archived orders</a>
                     <a onclick="notEvenClose();">Manage your lists</a>
@@ -57,7 +78,7 @@
                 </div>
                 <div class="section">
                     <h3>Digital content and devices</h3>
-                    <a onclick="notEvenClose();">Manage content and devices</a>
+                    <a onclick="devices();">Manage content and devices</a>
                     <a onclick="notEvenClose();">Your apps</a>
                     <a onclick="notEvenClose();">Video settings</a>
                     <a onclick="notEvenClose();">Music Settings</a>
@@ -93,7 +114,7 @@
                 </div>
                 <div class="section">
                     <h3>Other programs</h3>
-                    <a onclick="notEvenClose();">Credit cards</a>
+                    <a onclick="payment();">Credit cards</a>
                     <a onclick="notEvenClose();">Your seller account</a>
                     <a onclick="notEvenClose();">Manage your trade-ins</a>
                     <a onclick="notEvenClose();">Business registration</a>
@@ -103,10 +124,174 @@
             </div>
         </div>
 
-        <div id="whoops" class="playStep">
+        <div id="whoops" class="playStep padded">
             <h1>Not Even Close!</h1>
             <p>This page does not let you close your account.</p>
-            <button onclick="">Go Back</button>
+            <button onclick="step1()">Go Back</button>
+        </div>
+
+        <div id="payment" class="playStep padded">
+            <h1>Your Payment Settings</h1>
+            <div class="column">
+                <p>Card</p>
+                <p>Visa ending in 1511</p>
+                <p>MasterCard ending in 8142</p>
+                <p>Visa ending in 5321</p>
+                <p>Visa ending in 9812</p>
+            </div>
+            <div class="column">
+                <p>Expires</p>
+                <p>02/2021</p>
+                <p>08/2020</p>
+                <p>Expired</p>
+                <p>Expired</p>
+            </div>
+
+            <button onclick="step1();">Go Back</button>
+        </div>
+
+        <div id="devices" class="playStep padded">
+            <h1>Your Devices</h1>
+            <div class="column">
+                <p>Device</p>
+                <p>iPad</p>
+                <p>MacBook Pro</p>
+                <p>PC</p>
+            </div>
+            <div class="column">
+                <p>Last Active</p>
+                <p>12/03/2019 14:12</p>
+                <p>12/01/2019 09:55</p>
+                <p>10/24/2019 22:01</p>
+            </div>
+
+            <button onclick="step1();">Go Back</button>
+        </div>
+
+        <div id="help" class="playStep padded">
+            <h1>How can we help?</h1>
+            <div class="sectionContainer">
+                <div class="section">
+                    <h3>Your Orders</h3>
+                    <a onclick="notEvenClose();">Track Packages</a>
+                    <a onclick="notEvenClose();">Cancel Orders</a>
+                </div>
+                <div class="section">
+                    <h3>Payments &amp; Gift Cards</h3>
+                    <a onclick="payment();">Edit Payment Methods</a>
+                    <a onclick="payment();">Add a Gift Card</a>
+                </div>
+                <div class="section">
+                    <h3>Settings</h3>
+                    <a onclick="notEvenClose();">Update Login Information</a>
+                    <a onclick="notEvenClose();">Change Email or Password</a>
+                    <a onclick="updateInfo();">Update Account Information</a>
+                </div>
+            </div>
+
+            <button onclick="step1();">Go Back</button>
+        </div>
+
+        <div id="info" class="playStep padded">
+            <h1>Account Settings</h1>
+            <div class="sectionContainer">
+                <div class="section fancy" onclick="notEvenClose();">
+                    <h4>Member Since</h4>
+                    <h2>October 3, 2013</h2>
+                    <a onclick="notEvenClose();">Your Rewards</a>
+                </div>
+                <div class="section fancy" onclick="plan();">
+                    <h4>Your Plan</h4>
+                    <h2>Annual $199</h2>
+                    <a onclick="plan();">Update Plan</a>
+                </div>
+                <div class="section fancy" onclick="payment();">
+                    <h4>Renewal Date</h4>
+                    <h2>October 3, 2020</h2>
+                    <a onclick="payment();">Update your Payment Method</a>
+                </div>
+                <div class="section fancy" onclick="membership();">
+                    <h4>Manage</h4>
+                    <h2>Membership</h2>
+                    <a onclick="membership();">Update your Settings</a>
+                </div>
+            </div>
+            <button onclick="help();">Go Back</button>
+        </div>
+
+        <div id="membership" class="playStep padded">
+            <h1>Your Membership</h1>
+            <div class="sectionContainer">
+                <div class="section fancy" onclick="notEvenClose();">
+                    <h4>Membership Sharing</h4>
+                    <h2>Share your benefits</h2>
+                    <a onclick="notEvenClose();">Manage your household</a>
+                </div>
+                <div class="section fancy" onclick="notEvenClose();">
+                    <h2>Remind me before renewing</h2>
+                    <a onclick="notEvenClose();">Update Your Notifications</a>
+                </div>
+                <div class="section fancy" onclick="payment();">
+                    <h4>Renewal Method</h4>
+                    <h2>Billed to VISA ending in 1511</h2>
+                    <a onclick="payment();">Change your Renewal Method</a>
+                </div>
+                <div class="section fancy" onclick="end();">
+                    <h2>End Membership</h2>
+                    <h4>
+                        By ending your membership, you'll loose access to your
+                        membership benefits
+                    </h4>
+                    <a onclick="end();">End Membership</a>
+                </div>
+            </div>
+            <button onclick="help();">Go Back</button>
+        </div>
+
+        <div id="end" class="playStep padded">
+            <h3>End Your Membership</h3>
+            <h1>Are You Sure?</h1>
+            <p>
+                By ending your membership, you'll loose access to your
+                membership benefits. Would you like to keep your benefits?
+            </p>
+            <button onclick="step1();" style="display: inline-block;">
+                Yes
+            </button>
+            <a
+                onclick="wow();endPlay();"
+                style="display: inline-block; margin-left: 20px;"
+                >No</a
+            >
+        </div>
+
+        <div id="plan" class="playStep padded">
+            <h1>Change Your Plan</h1>
+            <div class="sectionContainer">
+                <div class="section tall">
+                    <h4>Plan</h4>
+                    <h1>Business $699</h1>
+                    <a onclick="notEvenClose();">Choose this plan</a>
+                </div>
+                <div class="section tall selected">
+                    <h4>
+                        Plan
+                        <span
+                            style="background-color: #e47911; padding: 5px; border-radius: 5px;"
+                            >Best Value</span
+                        >
+                    </h4>
+                    <h1>Annual $199</h1>
+                    <p>Your Plan</p>
+                </div>
+                <div class="section tall">
+                    <h4>Plan</h4>
+                    <h1>Monthly $24</h1>
+                    <a onclick="notEvenClose();">Choose this plan</a>
+                </div>
+            </div>
+
+            <button onclick="help();">Go Back</button>
         </div>
 
         <!-- footer with nav links   -->
@@ -125,8 +310,8 @@
                 <a onclick="notEvenClose();">Your Orders</a>
                 <a onclick="notEvenClose();">Shipping Rates &amp; Policies</a>
                 <a onclick="notEvenClose();">Returns &amp; Replacements</a>
-                <a onclick="notEvenClose();">Manage Your Content and Devices</a>
-                <a onclick="notEvenClose();">Help</a>
+                <a onclick="devices();">Manage Your Content and Devices</a>
+                <a onclick="help();">Help</a>
             </div>
         </div>
     </body>
