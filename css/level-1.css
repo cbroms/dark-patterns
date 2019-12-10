@@ -1,128 +1,13 @@
-.section {
-    width: 275px;
-    padding: 14px 18px;
-    margin: 20px 5px;
-    border-radius: 5px;
-    border: 1px #ddd solid;
-}
-
-.column {
-    display: inline-block;
-    margin-right: 30px;
-}
-
-.sideBySide {
-    display: inline-block;
-}
-
-.fancy {
-    width: 100% !important;
-    background-color: #ddd;
-    cursor: pointer;
-}
-
-.fancy:hover {
-    background-color: #eee;
-}
-
-.selected {
-    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
-}
-
-#bar {
-    margin-top: 30px;
-    margin-left: 20px;
-    max-width: 600px;
-    width: 60vw;
-    background-color: white;
-    border-radius: 5px;
-    height: 40px;
-}
-
 button {
-    font-size: 100%;
-    font-weight: bold;
-    display: block;
-    margin-top: 30px;
-    min-width: 80px;
+    min-width: 150px;
     height: 40px;
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
-    cursor: pointer;
-}
-
-a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.section a {
-    color: #0066c0;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.sectionContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.playStep {
-    display: none;
-}
-
-#footer {
-    height: 400px;
-    width: 100%;
-    background-color: #232f3e;
-}
-
-.links {
-    max-width: 800px;
-    margin: 20px auto;
-    /*  padding: 20px;*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#footer {
-    color: #ddd;
-    padding-top: 20px;
-}
-
-#account {
-    max-width: 1000px;
-    margin: 60px auto;
-    min-height: 80vh;
-}
-
-.padded {
-    min-height: 80vh;
-    padding: 10px;
-    max-width: 1000px;
-    margin: 60px auto;
-}
-
-#header {
+    background-color: #5000d3;
+    border-radius: 10px;
+    border: none;
     color: white;
-    padding: 10px 40px;
-    height: 100px;
-    background-color: #232f3e;
+    margin: 20px 0;
 }
 
-#title {
-    margin-left: 23px;
-}
-
-#whoops {
-    max-width: 1000px;
-    margin: 0 auto;
-    height: 80vh;
-}
-.accent {
-    color: #e47911;
+body {
+    background-color: #b2ccf7;
 }

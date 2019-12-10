@@ -4,6 +4,15 @@ body {
     font-family: helvetica;
 }
 
+button {
+    cursor: pointer;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
 #restart {
     display: inline-block;
     margin: 0 20px;
@@ -13,7 +22,12 @@ body {
     display: inline-block;
 }
 
+#headerContent {
+    float: right;
+}
+
 #playHeader {
+    height: 40px;
     padding: 20px;
     background-color: black;
     color: white;
@@ -23,8 +37,20 @@ body {
     background-color: yellow;
 }
 
+.playStep {
+    display: none;
+}
+
+.padded {
+    min-height: 80vh;
+    padding: 10px;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
 #playArea {
     padding: 10px;
     max-width: 800px;
     margin: 20px auto;
 }
+

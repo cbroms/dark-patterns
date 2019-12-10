@@ -16,19 +16,17 @@ const endGame = () => {
 // prepare to score a game by placing a scoring variable in mem and setting the game
 // attribute to zero. if there's already a variable there, reset the current level only
 const prepareLocalMem = (game, level) => {
-    let oldGameObj = localStorage.getItem("gameScore");
+    let oldGameObj = JSON.parse(localStorage.getItem("gameScore"));
     if (!oldGameObj) {
         let gameObj = {};
         gameObj[game] = [];
         gameObj[game][level - 1] = 0;
         localStorage.setItem("gameScore", JSON.stringify(gameObj));
-    } else if (!oldGameObj[game]) {
-        oldGameObj = JSON.parse(oldGameObj);
+    } else if (oldGameObj[game] === undefined) {
         oldGameObj[game] = [];
         oldGameObj[game][level - 1] = 0;
         localStorage.setItem("gameScore", JSON.stringify(oldGameObj));
     } else {
-        oldGameObj = JSON.parse(oldGameObj);
         oldGameObj[game][level - 1] = 0;
         localStorage.setItem("gameScore", JSON.stringify(oldGameObj));
     }
@@ -36,11 +34,11 @@ const prepareLocalMem = (game, level) => {
 
 // get retrieve the game score from mem by getting the scoring var and getting
 // game ID attribute
-const getGameScore = game => {
-    const levels = JSON.parse(localStorage.getItem("gameScore"))[game];
-    return levels.reduce((sum, val) => {
-        sum + val;
-    });
+const getGameScore = (game, level) => {
+    const levels = JSON.parse(localStorage.getItem("gameScore"))[game][
+        level - 1
+    ];
+    return levels;
 };
 
 const getAllScores = () => {

@@ -3,11 +3,111 @@
     <head>
         <meta charset="UTF-8" />
         <title>Dark Patterns</title>
-        <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/welcome.css" />
+        <script src="/js/uuidv4.js"></script>
     </head>
     <body>
-        <h1>Hey there</h1>
-        <a href="/level-1/">Play the game</a>
+        <div id="cookies">
+            <h1>This site uses cookies</h1>
+            <p>
+                We use cookies to improve your experience on our site and to
+                show you personalized advertising. You don't really have a
+                choice in this, so just accept and move on.
+            </p>
+            <button onclick="okay();">I agree</button>
+            <a onclick="fu();">No, thanks.</a>
+        </div>
+
+        <div id="fu">
+            <h1>Wow, that hurt our feelings.</h1>
+
+            <p>
+                Looks like you can't use the site now. You should reconsider
+                your decision and accept the policy.
+            </p>
+            <button onclick="okay();">I agree</button>
+            <a href="/crying.jpg">Nope, I'm sure.</a>
+        </div>
+
+        <div class="padded">
+            <h1>Dark Patterns: The Game</h1>
+            <p>
+                That was just a taste. Explore the dark side of modern user
+                interface design.
+            </p>
+            <a href="/level-1/">Play the game</a>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="close" style="opacity: 0.2; display: none;"
+                        >&times;</span
+                    >
+                    <div class="modal-interior">
+                        <div id="first">
+                            <h1>Stay Up-To-Date!</h1>
+                            <h2>Our daily emails are top-notch...</h2>
+                            <p>
+                                Thanks for visiting. We know you'll like the
+                                game, so we'd like to take this opportunity to
+                                suggest you sign up for our email list. You'll
+                                get frequent updates about future games, events,
+                                and more.
+                                <a onclick="np();" style="opacity: 0.1;"
+                                    >Maybe later.</a
+                                >
+                            </p>
+                        </div>
+
+                        <div id="second" style="display: none;">
+                            <h1>Thanks! How About a Donation?</h1>
+                            <p>
+                                Thanks, for signing up, you won't be sorry! Are
+                                you interested in donating to keep this awesome
+                                service running?
+                                <a onclick="done();" style="opacity: 0.2"
+                                    >No, I'm an evil person.</a
+                                >
+                            </p>
+
+                            <button onclick="donate()">
+                                Continue
+                            </button>
+                        </div>
+
+                        <div id="third" style="display: none;">
+                            <h1>No Worries!</h1>
+                            <p>
+                                Not a problem. Enter your email and we'll send
+                                you a reminder to sign up later.
+                            </p>
+                        </div>
+
+                        <div id="fourth" style="display: none;">
+                            <h1>Incredible, Thanks!</h1>
+                            <p>
+                                We've sent you all the details. Now on to the
+                                game!
+                            </p>
+                            <button onclick="done()">
+                                Continue
+                            </button>
+                        </div>
+
+                        <div id="inputs">
+                            <input id="email" type="text" placeholder="email" />
+                            <button onclick="checkEmail();">Submit</button>
+                            <p id="bad" style="color: red; display: none;">
+                                Please enter a valid email address!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/welcome.js"></script>
         <script src="../js/scoring.js"></script>
         <script>
             const id = uuidv4();
