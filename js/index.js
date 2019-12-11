@@ -32,6 +32,7 @@ const startPlay = () => {
     restartButton.innerText = "Restart Level";
     restartButton.onclick = () => {
         endPlay();
+        location.reload();
         step1();
         startPlay();
         // window.location.href = "/level-1/";

@@ -36,7 +36,8 @@
                 That was just a taste. Explore the dark side of modern user
                 interface design.
             </p>
-            <a href="/level-1/">Play the game</a>
+            <a href="#">Play the game now</a> by clicking
+            <a onclick="window.location.href = '/level-1'">here.</a>
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -55,9 +56,6 @@
                                 suggest you sign up for our email list. You'll
                                 get frequent updates about future games, events,
                                 and more.
-                                <a onclick="np();" style="opacity: 0.1;"
-                                    >Maybe later.</a
-                                >
                             </p>
                         </div>
 
@@ -99,6 +97,9 @@
                         <div id="inputs">
                             <input id="email" type="text" placeholder="email" />
                             <button onclick="checkEmail();">Submit</button>
+                            <a onclick="np();" id="later" style="opacity: 0.5;"
+                                >Maybe later</a
+                            >
                             <p id="bad" style="color: red; display: none;">
                                 Please enter a valid email address!
                             </p>

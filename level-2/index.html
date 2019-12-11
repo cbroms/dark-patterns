@@ -16,15 +16,21 @@
         <div id="instructions" class="playStep padded" style="display: block;">
             <h1>Level 2: Into the Amazon</h1>
             <p>
-                Your task: cancel your account as fast as you can.
+                <em>Your task: cancel your account as fast as you can.</em>
+                Avoid clicking into pages that don't take you to closing your
+                account. Each extra click results in a 5-second penalty.
             </p>
             <button onclick="startPlay();step1();">Start!</button>
         </div>
 
         <div id="wow" class="playStep padded">
             <h1>You Cancelled Your Account!</h1>
+            You clicked
+            <h1 id="num" style="display: inline-block;"></h1>
+            irrelevant pages or buttons while trying to close your account.
+            <br />
 
-            Nice work! You completed this level in
+            Your final time is
             <h1 id="final" style="display: inline-block;"></h1>
         </div>
 
@@ -251,9 +257,10 @@
             <h1>Are You Sure?</h1>
             <p>
                 By ending your membership, you'll loose access to your
-                membership benefits. Would you like to keep your benefits?
+                membership benefits. Would you like to keep your benefits? You
+                won't be able to regain them by signing back up.
             </p>
-            <button onclick="step1();" style="display: inline-block;">
+            <button onclick="step1();clicks++;" style="display: inline-block;">
                 Yes
             </button>
             <a

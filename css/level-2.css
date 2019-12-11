@@ -6,6 +6,10 @@
     border: 1px #ddd solid;
 }
 
+p {
+    max-width: 500px;
+}
+
 .column {
     display: inline-block;
     margin-right: 30px;

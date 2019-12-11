@@ -1,13 +1,114 @@
 button {
-    min-width: 150px;
+    min-width: 250px;
     height: 40px;
     background-color: #5000d3;
     border-radius: 10px;
     border: none;
     color: white;
     margin: 20px 0;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.06),
+        0px 0px 2px rgba(0, 0, 0, 0.25);
 }
 
 body {
-    background-color: #b2ccf7;
+    background-color: #f2f2f9;
+}
+
+p {
+    max-width: 500px;
+    color: #3d3d3d;
+}
+
+input {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 110%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.interior {
+    width: 350px;
+    margin: 0 auto;
+}
+
+img {
+    position: fixed;
+    z-index: -1000;
+    bottom: 0;
+    right: 0;
+    height: 250px;
+}
+
+.container {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    min-height: 400px;
+    background-color: #fafafa;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.06),
+        0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+#header {
+    height: 50px;
+    width: 100vw;
+}
+
+#logo {
+    color: #5000d3;
+    margin-left: 20px;
+}
+
+#agree {
+    width: auto;
+}
+
+li {
+    font-weight: bold;
+    font-size: 120%;
+    margin: 20px;
+}
+
+.trap {
+    width: auto;
+}
+
+.lame {
+    font-size: 90%;
+    opacity: 0.5;
+    padding-left: 20px;
+}
+
+iframe {
+    background-color: white;
+    height: 65px;
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+#secret {
+    margin-top: 300px;
+}
+
+#contactOpts {
+    display: none;
 }

@@ -13,22 +13,186 @@
         <script src="../js/scoring.js"></script>
         <script src="../js/index.js"></script>
         <script src="../js/level-1.js"></script>
+        <img src="key.png" alt="" />
         <div id="instructions" class="playStep padded" style="display: block;">
             <h1>Level 1: Sign Me Up!</h1>
             <p>
-                Your task: create an account as fast as you can.
+                <em>Your task: create an account as fast as you can.</em> Avoid
+                adding premium features, giving out too much personal info, and
+                enabling notifications. Each infraction results in a 5-second
+                penalty.
             </p>
             <button onclick="startPlay();step1();">Start!</button>
+        </div>
+
+        <div id="header" class="playStep">
+            <h1 id="logo">slydio</h1>
         </div>
 
         <div id="wow" class="playStep padded">
             <h1>You Created An Account!</h1>
 
-            Nice work! You completed this level in
+            You added
+            <h1 id="num" style="display: inline-block;"></h1>
+            extra paid features, unnecessary pieces of personal information, and
+            notifications.
+            <br />
+            Your final time is
             <h1 id="final" style="display: inline-block;"></h1>
-            <button onclick="nextLevel();">Start!</button>
+            .
+            <br />
+            <button onclick="nextLevel();">Next Level</button>
         </div>
 
-        <div id="start" class="playStep padded"></div>
+        <div id="start" class="playStep centered">
+            <h1>Try the free demo.</h1>
+            <div>Create a slydio account.</div>
+            <div class="container">
+                <div class="interior">
+                    <p class="error" id="firstError">
+                        Whoops! Please include your first name.
+                    </p>
+                    <p class="error" id="lastError">
+                        Whoops! Please include your last name.
+                    </p>
+                    <p class="error" id="emailError">
+                        Whoops! Please include a valid email address.
+                    </p>
+                    <p class="error" id="matchError">
+                        Whoops! Your passwords must match.
+                    </p>
+                    <p class="error" id="numbersError">
+                        Whoops! Your password must have at least 4 numbers.
+                    </p>
+                    <p class="error" id="lowerLettersError">
+                        Whoops! Your password must have at least 8 lowercase
+                        letters.
+                    </p>
+                    <p class="error" id="upperLettersError">
+                        Whoops! Your password must have at least 2 uppercase
+                        letters.
+                    </p>
+                    <p class="error" id="specialCharsError">
+                        Whoops! Your password must have at least 4 special
+                        characters.
+                    </p>
+                    <span class="label">First name</span>
+                    <input type="text" placeholder="First" id="first" />
+                    <span class="label">Last name</span>
+                    <input type="text" placeholder="Last" id="last" />
+                    <span class="label">Email</span>
+                    <input type="text" id="email" />
+                    <span class="label">Password</span>
+                    <input id="pass1" type="password" />
+                    <span class="label">Confirm Password</span>
+                    <input type="password" id="pass2" />
+                    <button onclick="step2();">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="tos" class="playStep centered">
+            <h1>Try the free demo.</h1>
+            <div>Create a slydio account.</div>
+            <div class="container">
+                <div class="interior">
+                    <iframe src="tos.html" frameborder="0"></iframe>
+                    <iframe src="priv.html" frameborder="0"></iframe>
+                    <p>
+                        <input type="checkbox" id="agree" /> I have read and
+                        agree to the terms of service and privacy policy.
+                    </p>
+                    <p class="error" id="agreeError">
+                        You must accept the terms of service and privacy policy
+                        to create an account.
+                    </p>
+
+                    <button onclick="step3();">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="plan" class="playStep centered">
+            <h1>Try the free demo.</h1>
+            <div>Create a slydio account.</div>
+            <div class="container">
+                <div class="interior">
+                    <h2>Your Plan's Industry-Leading Features</h2>
+                    <p>
+                        Slydio provides the industry's best cloud-storage
+                        options for an incredible low price.
+                    </p>
+                    <ul>
+                        <li>100GB storage/month</li>
+                        <li>Unlimited inbox storage</li>
+                        <li>Unlimited email addresses</li>
+                        <li>Unlimited domains</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <p>You'll be able to unsubscribe at any time!</p>
+                    <button onclick="step4();chosePlan();">Continue</button>
+                    <div id="secret">
+                        <a onclick="step4();skippedPlan();" class="lame">
+                            Or, continue without a plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="playStep centered">
+            <h1>Try the free demo.</h1>
+            <div>Create a slydio account.</div>
+            <div class="container">
+                <div class="interior">
+                    <h2>Ready to Go?</h2>
+                    <p>
+                        We'll keep you up-to-date with all the latest updates
+                        and new features to hit slydio!
+                    </p>
+
+                    <div id="contactOpts">
+                        <h2>Send me notifications about...</h2>
+                        <p>
+                            We try hard to make sure we only send the most
+                            relevant information to you. Change your mind?
+                            Uncheck to subscribe. We promise everything we send
+                            is worth reading!
+                        </p>
+
+                        <p>
+                            <input type="checkbox" class="trap" checked />
+                            Feature updates
+                        </p>
+                        <p>
+                            <input type="checkbox" class="trap" checked />
+                            Feature updates
+                        </p>
+                        <p>
+                            <input type="checkbox" class="trap" checked /> Sales
+                            and discounts
+                        </p>
+                        <p>
+                            <input type="checkbox" class="trap" checked />
+                            Pricing changes
+                        </p>
+                        <p>
+                            <input type="checkbox" class="trap" checked /> Plan
+                            updates
+                        </p>
+                        <p>
+                            <input type="checkbox" class="trap" checked /> Terms
+                            of service changes
+                        </p>
+                        <p>
+                            <input type="checkbox" class="trap" checked />
+                            Privacy policy changes
+                        </p>
+                    </div>
+                    <button onclick="finish();endPlay();">Let's go!</button>
+                    <a onclick="optOut();" class="lame">No thanks</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

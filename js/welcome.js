@@ -21,13 +21,14 @@ document.getElementById("close").onclick = () => {
 
 const np = () => {
     document.getElementById("first").style.display = "none";
+    document.getElementById("later").style.display = "none";
     document.getElementById("third").style.display = "block";
     document.getElementById("close").style.display = "block";
 };
 
 const checkEmail = () => {
     const email = document.getElementById("email").value;
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (re.test(email)) {
         document.getElementById("inputs").style.display = "none";
         document.getElementById("first").style.display = "none";
