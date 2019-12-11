@@ -49,6 +49,7 @@ const done = () => {
 
 const okay = () => {
     document.getElementById("cookies").style.display = "none";
+    document.getElementById("fu").style.display = "none";
 };
 
 const fu = () => {
